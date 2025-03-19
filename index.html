@@ -1,29 +1,332 @@
-<!DOCTYPE html>
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mr. Pingvin - Home</title>
+    <title>Mr. Pingvin</title>
+    
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+       <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header><h1>Mr. Pingvin</h1></header>
+    <header>
+        <h1>Mr. Pingvin</h1>
+    </header>
+
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="values.html">Values</a></li>
-            <li><a href="how.html">How</a></li>
-            <li><a href="reminders.html">Reminders</a></li>
-            <li><a href="quest.html">Quest Generator</a></li>
-            <li><a href="bahay-quest.html">Bahay Quest</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#values">Values</a></li>
+            <li><a href="#how">How to Build Values</a></li>
+            <li><a href="#quest">Quest</a></li>
+            <li><a href="#bahay-quest">Bahay Quest</a></li>
+            <li><a href="#bible-verses">Bible Verses</a></li>
         </ul>
     </nav>
-    <section class="content">
+
+   
+  
+</body>
+
+
+
+
+
+
+    <section class="content" id="about">
         <h2>About Us</h2>
-        <p>Welcome to Mr. Pingvin! Our mission is to develop students morally and academically.</p>
-        <h3>Mission & Vision</h3>
-        <p>Our goal is to nurture values and integrity in students.</p>
+        <p>Mr. Pingvin is dedicated to developing students academically and morally to prepare them for a meaningful life.</p>
+        <h3>Mission</h3>
+        <p>To nurture the core values and promote appropriate behavior of every student at St. Jude Parish School.</p>
+        <p>To develop a society where students show respect and integrity, guiding students to reflect on their actions.</p>
+        <p>To foster a community that appreciates the practice of personal growth and development.</p>
+        <p>To practice proper and respectful behavior not just within the school community but also in the wider community.</p>
+
+        <h3>Vision</h3>
+        <p>We envision a learning environment where every student values respect, kindness, and personal growth, applying these principles in their daily lives.</p>
+    </section>
+
+    <section class="content" id="values">
+        <h2>What are Values?</h2>
+        <p>Values are principles that guide actions and decisions, shaping individuals into responsible and empathetic members of society.</p>
+    </section>
+
+    <section class="content" id="how">
+        <h2>How Can We Build Strong Values?</h2>
+        <ul>
+            <li>Lead by example – Show honesty, kindness, and respect.</li>
+            <li>Encourage reflection – Help students think about their actions.</li>
+            <li>Promote responsibility – Assign tasks that teach accountability.</li>
+            <li>Use real-life lessons – Apply values in everyday situations.</li>
+        </ul>
+    </section>
+
+    <section class="content" id="reminders">
+        <h2>Why Are Values Important?</h2>
+        <p>Values shape our character and define how we interact with others. They help us make ethical decisions and contribute positively to society.</p>
+    </section>
+<section class="content" id="quest">
+        <h2>Quest Generator</h2>
+        <p id="quest-text">Click below to generate a quest!</p>
+        <button id="quest-button">Generate Quest</button>
+    </section>
+
+    <section class="content" id="bahay-quest">
+        <h2>Bahay Quest Generator</h2>
+        <p id="bahay-quest-text">Click below to generate a Bahay Quest!</p>
+        <button id="bahay-quest-button">Generate Bahay Quest</button>
+    </section>
+
+
+  
+
+    <!-- Quest Progress Tracker -->
+<section class="content" id="progress-tracker">
+    <h2>Quest Progress Tracker</h2>
+    <p>Completed Quests: <span id="quest-count">0</span></p>
+    <p id="confirm-text" style="display: none;">Did you complete this quest?</p>
+    <button id="confirm-yes" style="display: none;">Yes</button>
+</section>
+
+
+    <section class="content" id="bible-verses">
+        <h2>Bible Verses</h2>
+        <p><b>Proverbs 22:6</b> - "Train up a child in the way he should go; even when he is old he will not depart from it."</p>
+        <p><b>Philippians 4:8</b> - "Whatever is true, whatever is noble, whatever is right, whatever is pure, whatever is lovely, whatever is admirable--if anything is excellent or praiseworthy--think about such things."</p>
+        <p><b>Matthew 5:16</b> - "Let your light shine before others, that they may see your good deeds and glorify your Father in heaven."</p>
+        <p><b>Colossians 3:23</b> - "Whatever you do, work at it with all your heart, as working for the Lord, not for human masters."</p>
     </section>
 </body>
 </html>
+
+
+
+
+
+
+
+
+<style>body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    font-size: 2.5em;
+    font-family: 'Playfair Display', serif;
+}
+
+nav {
+    background-color: #34495e;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f1c40f;
+}
+
+.content {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    text-align: left;
+}
+
+button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+button:disabled {
+    background-color: #7f8c8d;
+    cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+#progress-tracker {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#complete-quest {
+    background-color: #3498db;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    transition: background 0.3s;
+}
+
+#complete-quest:hover {
+    background-color: #2980b9;
+}
+</style><script>document.addEventListener("DOMContentLoaded", function () {
+    const questButton = document.getElementById("quest-button");
+    const questText = document.getElementById("quest-text");
+    const bahayButton = document.getElementById("bahay-quest-button");
+    const bahayQuestText = document.getElementById("bahay-quest-text");
+    const questCountElement = document.getElementById("quest-count");
+    const confirmText = document.getElementById("confirm-text");
+    const confirmYesButton = document.getElementById("confirm-yes");
+
+    let completedQuests = parseInt(localStorage.getItem("completedQuests")) || 0;
+    let currentQuest = ""; // Store current quest to confirm completion
+
+    function updateProgress() {
+        questCountElement.textContent = completedQuests;
+        localStorage.setItem("completedQuests", completedQuests);
+    }
+
+    function generateQuest(button, textElement, questList) {
+        const randomIndex = Math.floor(Math.random() * questList.length);
+        currentQuest = questList[randomIndex];
+        textElement.textContent = currentQuest;
+
+        // Show confirmation prompt
+        confirmText.style.display = "block";
+        confirmYesButton.style.display = "block";
+    }
+
+    confirmYesButton.addEventListener("click", function () {
+        if (currentQuest) {
+            completedQuests++;
+            updateProgress();
+            currentQuest = ""; // Reset quest after confirmation
+
+            // Hide confirmation prompt
+            confirmText.style.display = "none";
+            confirmYesButton.style.display = "none";
+        }
+    });
+
+    const quests = [
+        "Help a classmate with their studies for 30 minutes.",
+        "Write a thank-you note to a teacher or school staff member.",
+        "Pick up and properly dispose of at least five pieces of trash in your school.",
+        "Say something kind to at least three people today.",
+        "Hold the door open for someone at least three times today.",
+        "Spend at least 15 minutes listening to someone who needs support.",
+        "Encourage a classmate who is struggling with a subject or task.",
+        "Share your lunch or a snack with someone who might need it.",
+        "Lead by example—stay honest and always tell the truth today.",
+        "Write down one positive thing about yourself and share it with a friend.",
+        "Greet your teachers and classmates with a smile today.",
+        "Help a younger student with their homework or reading.",
+        "Offer to clean up a classroom or school area without being asked.",
+        "Respectfully listen when someone is speaking, without interrupting.",
+        "Compliment five different people today.",
+        "Write a letter to your future self about your goals and values.",
+        "Make sure everyone in your group feels included in an activity.",
+        "Apologize to someone if you have done something wrong.",
+        "Take responsibility for one of your mistakes and correct it.",
+        "Show patience by waiting your turn in line without complaining.",
+        "Donate school supplies or books to someone in need.",
+        "Do a random act of kindness for a classmate or teacher.",
+        "Help a classmate carry their school supplies.",
+        "Organize a small clean-up activity in your classroom.",
+        "Start a gratitude journal and write three things you're grateful for.",
+        "Volunteer to read a book to younger students.",
+        "Lead a short morning prayer or motivational talk in class.",
+        "Learn a new skill that can help your community and teach others.",
+        "Make a friendship bracelet and give it to someone as a token of appreciation.",
+        "Ask a teacher how you can help improve the classroom environment."
+    ];
+
+    const bahayQuests = [
+        "Help a family member with household chores without being asked.",
+        "Say 'thank you' after every meal.",
+        "Spend 15 minutes talking with a family member without distractions.",
+        "Make your bed first thing in the morning.",
+        "Apologize sincerely if you make a mistake.",
+        "Prepare a meal or snack for your family.",
+        "Write a heartfelt note to a family member.",
+        "Avoid raising your voice when speaking with family.",
+        "Read a book to a younger sibling or family member.",
+        "Turn off unnecessary lights to save energy.",
+        "Respect quiet hours when someone is working or sleeping.",
+        "Tidy up a shared space without being told.",
+        "Pray together with your family.",
+        "Listen actively when a family member talks.",
+        "Offer to help fix something around the house.",
+        "Give a genuine compliment to each family member today.",
+        "Limit screen time and spend quality time with family.",
+        "Wash the dishes after a meal without being asked.",
+        "Show patience when dealing with younger siblings.",
+        "Avoid arguments and seek peaceful resolutions.",
+        "Organize and clean your personal study area.",
+        "Assist in preparing and serving meals.",
+        "Respect house rules without being reminded.",
+        "Help a sibling with their homework or schoolwork.",
+        "Take care of a pet by feeding or cleaning up after it.",
+        "Fold and put away laundry without being asked.",
+        "Water the plants and take care of the garden.",
+        "Write a short letter of appreciation to your parents or guardians.",
+        "Share a personal story about a time you practiced kindness.",
+        "Spend quality time with an elderly family member by listening to their stories."
+    ];
+
+    if (questButton) {
+        questButton.addEventListener("click", function () {
+            generateQuest(questButton, questText, quests);
+        });
+    }
+
+    if (bahayButton) {
+        bahayButton.addEventListener("click", function () {
+            generateQuest(bahayButton, bahayQuestText, bahayQuests);
+        });
+    }
+
+    updateProgress();
+});
+</script>
