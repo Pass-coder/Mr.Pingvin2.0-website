@@ -1,5 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Quest Generator</title><link rel="stylesheet" href="styles.css"><script defer src="quest.js"></script></head>
-<body><header><h1>Mr. Pingvin</h1></header><nav><ul><li><a href="index.html">Home</a></li><li><a href="values.html">Values</a></li><li><a href="how.html">How</a></li><li><a href="reminders.html">Reminders</a></li><li><a href="quest.html">Quest Generator</a></li><li><a href="bahay-quest.html">Bahay Quest</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
-<section class="content"><h2>Quest Generator</h2><p id="quest-text">Click below to generate a quest!</p><button id="quest-button">Generate Quest</button></section></body></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="quest.js"></script>
+</head>
+<body>
+    <header><h1>Mr. Pingvin</h1></header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="values.html">Values</a></li>
+            <li><a href="how.html">How</a></li>
+            <li><a href="reminders.html">Reminders</a></li>
+            <li><a href="quest.html">Quest Generator</a></li>
+            <li><a href="bahay-quest.html">Bahay Quest</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="content">
+        <h2>Quest Generator</h2>
+        <p id="quest-text">Click below to generate a quest!</p>
+        <button id="quest-button">Generate Quest</button>
+        <button id="quest-accept" style="display:none;">Accept</button>
+        <button id="quest-done" style="display:none;">Done</button>
+        <div class="progress-container">
+            <div id="progress-bar" class="progress-bar"></div>
+        </div>
+        <img id="badge" src="badge.jpg" alt="Achievement Badge" style="display:none; width: 100px;">
+    </section>
+</body>
+</html>
